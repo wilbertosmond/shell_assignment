@@ -39,7 +39,10 @@ sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Pytho
 4.2 Redirecting Standard Output with > and >>. Write-Output (write/echo) -> to send specified object to next command in pipeline
 - echo 'file contents' > file.txt -> make a file called file.txt containing the words "file contents"
 - echo 'more contents' >> file.txt -> append instead of overwrite
-4.3?
+4.3 Prevent Cluttering Your Terminal
+- sl ~
+- ls -recurse -name >home_contents.list
+- mi home_contents.list ..\Week2\shell_magic
 
 5. Chaining Commands Together
 5.1 The Pipe Symbol (|). Measure-Object (measure) to calculate numeric properties of objects (char, words, lines)

@@ -1,0 +1,7 @@
+An Introduction to Using Shell
+
+1. Welcome to the Terminal
+1.1 Commands. "Get-ChildItem" shows the contents of the current working directory. Columns are "Mode", "LastWriteTime" in date and time, "Length" of characters, "Name" of files.
+When typing "Get-Alias ls", it tells me the CommandType (e.g. Alias) of the Name (e.g. ls -> Get-ChildItem)
+1.2 Getting some help. Using Get-Help (command/alias) or (command/alias) -? shows the command name, synopsis (i.e. what it does: deletes the specified items), syntax, description (e.g. deletes items), related links, and remarks that it shows only partial help. However, when adding -Detailed at the end of Get-Help (command/alias), it shows an extension of help mainly listing the parameters we can use in the syntax and what they do, as well as some examples.
+Looking into the detailed documentation of Get-ChildItem, 

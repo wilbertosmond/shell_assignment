@@ -12,4 +12,29 @@ I played around with the command -Recurse which gets the items in the specified 
 I don't see text in different colors, but folders are of mode d and files are of mode a
 2.2 Moving Around. Command cd stands for change directory.
 sl .. --> move back working directory by one step (i.e. to parent folder)
-sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Python\shell_magic" --> move back to folder you started at
+sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Python\shell_magic" --> move back to shell_magic folder (but can do shortcut by typing shell and then tab)
+
+3. Working with Files and Directories
+3.1 Creating an Empty File. New-Item (alias=ni) to make an empty file called hello_world.txt (cannot leave space otherwise error, so use _ instead or other like -)
+3.2 Making Directories. ni "hello_world" -itemtype "directory"
+3.3 Moving and Renaming Files. Move-Item (mi/move/mv) to move file, Rename-Item (rni/ren) to rename item
+- Cannot create an empty file called hello_world in shell_magic directory bcs no file extension
+- ni hello_world.bfe and then rni "hello_world.bfe" -newname "hello_worldz.txt"
+- mi .\hello_world.txt -destination .\hello_world\ --> move hello_world.txt to hello_world folder
+- mi .\hello_world\hello_world.txt -destination "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Python\shell_magic" --> move file beck to shell_magic folder
+- change wd to hello_world folder --> sl .\hello_world\
+- move hello_world.txt file into this folder --> mi ..\hello_world.txt -destination .
+- move hello_world.txt file back to shell_magic folder --> mi .\hello_world.txt -destination ..
+3.4 Copying Files. Copy-Item (cpi/copy/cp) (vs moving file -> copying can move but keeps original in the current wd)
+- Copy hello_world.txt file from shell_magic folder to hello_world folder -> copy .\hello_world.txt -destination .\hello_world\
+- Copy hello_world.txt file from shell_magic folder to hello_world folder, but rename to world_hello.txt -> copy .\hello_world.txt -destination .\hello_world\world_hello.txt
+3.5 Removing Files and Directories. Remove-Item (ri/rm) 
+- remove hello_world.txt in wd -> ri hello_world.txt
+- remove hello_world.txt in hello_world folder -> ri .\hello_world\hello_world.txt
+- when trying to remove the whole hello_world folder -> error: confirm if want to delete the children -> if yes then click y
+
+4. Working with File Contents
+4.1 Displaying File Contents. Get-Content (gc/cat)
+- when trying to output the contents of this file -> nothing, bcs no content
+4.2 Redirecting Standard Output with > and >>
+

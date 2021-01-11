@@ -8,7 +8,7 @@ Looking into the detailed documentation of Get-ChildItem, we can add an option t
 I played around with the command -Recurse which gets the items in the specified locations and in all child items of the locations
 
 2. Finding Your Way Around
-2.1 Looking Around. Using Get-Location, I found that my current working directory is: C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Python\shell_magic>
+2.1 Looking Around. Using Get-Location, I found that my current working directory is: C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Python\shell_magic
 I don't see text in different colors, but folders are of mode d and files are of mode a
 2.2 Moving Around. Command cd stands for change directory.
 sl .. --> move back working directory by one step (i.e. to parent folder)
@@ -42,12 +42,14 @@ sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Pytho
 4.3 Prevent Cluttering Your Terminal
 - sl ~
 - ls -recurse -name >home_contents.list
-- mi home_contents.list ..\Week2\shell_magic
+- mi home_contents.list "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Python\shell_magic"
+- gc home_contents.list | oh -p -> prints contents of home_contents.list, use this instead of just gc when want only the names but not other details (e.g. mode, last write, length)
 
 5. Chaining Commands Together
 5.1 The Pipe Symbol (|). Measure-Object (measure) to calculate numeric properties of objects (char, words, lines)
 - measure file.txt -> doesnt show anything :(
-- 
+- gc home_contents.list | measure -word -> works!
+- | oh -p -> direct output of gc home_contents.list to oh -p
 
 
 

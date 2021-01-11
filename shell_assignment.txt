@@ -36,5 +36,12 @@ sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Pytho
 4. Working with File Contents
 4.1 Displaying File Contents. Get-Content (gc/cat)
 - when trying to output the contents of this file -> nothing, bcs no content
-4.2 Redirecting Standard Output with > and >>
+4.2 Redirecting Standard Output with > and >>. Write-Output (write/echo) -> to send specified object to next command in pipeline
+- echo 'file contents' > file.txt -> make a file called file.txt containing the words "file contents"
+- echo 'more contents' >> file.txt -> append instead of overwrite
+4.3?
+
+
+
+
 

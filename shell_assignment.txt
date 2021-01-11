@@ -41,7 +41,10 @@ sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Pytho
 - echo 'more contents' >> file.txt -> append instead of overwrite
 4.3?
 
-
+5. Chaining Commands Together
+5.1 The Pipe Symbol (|). Measure-Object (measure) to calculate numeric properties of objects (char, words, lines)
+- measure file.txt -> doesnt show anything :(
+- 
 
 
 

@@ -50,6 +50,23 @@ sl -path "C:\Users\wilbert osmond\Documents\Semester 6\UCACCMET2J\Week 2 - Pytho
 - measure file.txt -> doesnt show anything :(
 - gc home_contents.list | measure -word -> works!
 - | oh -p -> direct output of gc home_contents.list to oh -p
+5.2 Finding Patterns. Get-ChildItem | Select-Object FullName | Select-String .txt
+- echo 'hello world' > helloworld.txt
+  echo 'world hello' >> helloworld.txt
+- gci helloworld.txt | sls world -> outputs lines that contains 'world'
+- echo world hello > worldhello.txt
+  gci | sls hello
+- gci | select fullname | sls .txt -> output: file names (and its path) that contain .txt
+5.3 Daisy-Chaining the Commands You've Learned
+- gci helloworld.txt | sls hello -> find occurences of hello in helloworld.txt
+- gc .\helloworld.txt| sls world| measure -Word|oh -p
 
-
-
+6. Applying Shell Magic to Real Data
+6.2 Unpacking Archives
+- tar -xzvf archive.tar.gz
+6.3 Exploring Your Data
+- gci -Path .\aup\*.aup -Recurse -Force (or gci -Recurse -Filter *.aup .\aup\|oh -p)
+- .\aup\cohort3\s274fhum -> deepest level at which files are stored
+- sl .\aup\cohort3\s274fhum
+  gc s274fhum.aup | oh -p -> open an aup file
+- gci -Recurse -Filter *.aup .\aup\| measure -> There are 964 files in the .aup folder
